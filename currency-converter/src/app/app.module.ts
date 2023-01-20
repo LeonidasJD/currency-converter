@@ -4,8 +4,8 @@ import { AppComponent } from './app.component';
 import { DescriptionComponent } from './description/description.component';
 import { ConverterComponent } from './converter/converter.component';
 import { ShowingCurrencyComponent } from './converter/showing-currency/showing-currency.component';
-import { CurrencyListComponent } from './currency-list/currency-list.component';
-import { CurrencyItemComponent } from './currency-item/currency-item.component';
+import { CurrencyListComponent } from './converter/currency-list/currency-list.component';
+import { CurrencyItemComponent } from './converter/currency-list/currency-item/currency-item.component';
 
 
 @NgModule({
@@ -16,6 +16,7 @@ import { CurrencyItemComponent } from './currency-item/currency-item.component';
     ShowingCurrencyComponent,
     CurrencyListComponent,
     CurrencyItemComponent
+
   ],
   imports: [
     BrowserModule
