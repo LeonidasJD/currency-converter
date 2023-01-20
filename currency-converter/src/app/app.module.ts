@@ -4,12 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { DescriptionComponent } from './description/description.component';
 import { ConverterComponent } from './converter/converter.component';
+import { ShowingCurrencyComponent } from './showing-currency/showing-currency.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DescriptionComponent,
-    ConverterComponent
+    ConverterComponent,
+    ShowingCurrencyComponent
   ],
   imports: [
     BrowserModule
