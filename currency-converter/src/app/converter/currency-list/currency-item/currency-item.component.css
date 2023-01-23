@@ -1,0 +1,32 @@
+.currency-detail{
+
+  display: flex;
+
+}
+
+img{
+  max-width: 50px;
+  max-height:30px;
+  margin-right: 5px;
+  text-align: le;
+  border-radius: 5px;
+}
+
+
+.cur-name,.cur-short-name{
+  margin-bottom: 0px;
+}
+
+
+.amount{
+  text-align: right;
+  margin-right: 5px;
+}
+#col1{
+  width: 60px;
+  height: 30px;
+}
+a:hover{
+  font-weight: bold;
+}
+

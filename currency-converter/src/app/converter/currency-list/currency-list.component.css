@@ -1,0 +1,13 @@
+*{
+  color: white;
+}
+.currency-btn{
+  display: flex;
+  justify-content: center;
+}
+.cur-item{
+  background-color: rgba(78, 78, 78, 0.384);
+  border-radius: 5px;
+  padding-left: 10px;
+
+}

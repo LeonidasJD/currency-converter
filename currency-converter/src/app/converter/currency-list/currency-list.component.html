@@ -1,1 +1,13 @@
-<p>currency-list works!</p>
+<div class="row">
+  <div class="col-sm">
+    <div class="cur-item" style="padding-top: 20px; padding-bottom: 20px;">
+      <app-currency-item *ngFor="let currencyEl of currencies"  [currency]="currencyEl"></app-currency-item>
+      <div class="currency-btn">
+        <button class="btn btn-success" >Add Currency</button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+
+  </div>
+</div>
