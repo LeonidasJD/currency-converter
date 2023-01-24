@@ -7,7 +7,19 @@ import { ShowingCurrencyComponent } from './converter/showing-currency/showing-c
 import { CurrencyListComponent } from './converter/currency-list/currency-list.component';
 import { CurrencyItemComponent } from './converter/currency-list/currency-item/currency-item.component';
 import { FormsModule } from '@angular/forms';
+import {  HttpClientModule } from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
+import { DataBaseService } from './data-base.service';
+import { HomeComponent } from './home/home.component';
 
+
+
+const appRoutes: Routes = [
+
+    {path: ':id', component: ShowingCurrencyComponent}
+
+
+]
 
 @NgModule({
   declarations: [
@@ -16,14 +28,21 @@ import { FormsModule } from '@angular/forms';
     ConverterComponent,
     ShowingCurrencyComponent,
     CurrencyListComponent,
-    CurrencyItemComponent
+    CurrencyItemComponent,
+    HomeComponent,
+
+
 
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
+
+
   ],
-  providers: [],
+  providers: [DataBaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

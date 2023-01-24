@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ConvertService } from './converter/convert.service';
+import { DataBaseService } from './data-base.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'currency-converter';
+
+
+
 }

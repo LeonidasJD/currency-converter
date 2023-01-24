@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Subject } from 'rxjs';
 import { Currency } from 'src/app/currency-model/currency-model';
+import { DataBaseService } from 'src/app/data-base.service';
 import { ConvertService } from '../convert.service';
 
 @Component({
@@ -9,13 +12,23 @@ import { ConvertService } from '../convert.service';
 })
 export class CurrencyListComponent {
 
-constructor(private convertService:ConvertService){}
+constructor(private convertService:ConvertService,private router: Router, private route:ActivatedRoute ){}
+
+
 
 currencies:Currency[] = [];
 
+
 ngOnInit(){
 
-  this.currencies = this.convertService.getCurrencies();
+  this.convertService.sendNewArray.subscribe((newArray =>  this.currencies = newArray));
+  //this.currencies = this.convertService.getCurrencies();
+}
+
+reload(){
+
+    this.router.navigate([''],{relativeTo: this.route});
+
 }
 
 }

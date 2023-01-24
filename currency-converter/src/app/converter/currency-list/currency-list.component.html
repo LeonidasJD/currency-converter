@@ -1,9 +1,9 @@
 <div class="row">
   <div class="col-sm">
     <div class="cur-item" style="padding-top: 20px; padding-bottom: 20px;">
-      <app-currency-item *ngFor="let currencyEl of currencies"  [currency]="currencyEl"></app-currency-item>
+      <app-currency-item *ngFor="let currencyEl of currencies; let i = index " [currency]="currencyEl" [id]="i"></app-currency-item>
       <div class="currency-btn">
-        <button class="btn btn-success" >Add Currency</button>
+        <button class="btn btn-success" (click)="reload()" >Reload</button>
       </div>
     </div>
   </div>

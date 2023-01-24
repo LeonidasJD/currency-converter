@@ -12,12 +12,22 @@ export class CurrencyItemComponent {
 
 
 @Input() currency:Currency;
+@Input() id:number;
 
 amount1:number;
 
+fromCurency:string;
+
+convertedAmount:number
+
   ngOnInit(){
 
-    this.convertService.sendAmount.subscribe((amount  => {this.amount1 = amount * 117}));
-
+    this.convertService.sendAmount.subscribe((amount => this.amount1 = amount));
+    this.convertService.onSendShortName.subscribe((shortName => this.fromCurency = shortName));
   }
+
+
+
+
+
 }

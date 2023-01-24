@@ -1,15 +1,17 @@
 export class Currency {
 
 public name:string ;
-public shortName: string;
 public flag: string;
+public shortName:string;
 
 
-constructor(name:string, shortName:string, flag:string) {
+
+constructor(name:string, flag:string,shortName:string) {
 
 this.name = name;
-this.shortName = shortName;
 this.flag = flag;
+this.shortName = shortName;
+
 
 
 }
