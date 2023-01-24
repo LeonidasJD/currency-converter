@@ -14,20 +14,25 @@ export class CurrencyItemComponent {
 @Input() currency:Currency;
 @Input() id:number;
 
-amount1:number;
+
+
+amount1:number
 
 fromCurency:string;
 
-convertedAmount:number
+
 
   ngOnInit(){
 
-    this.convertService.sendAmount.subscribe((amount => this.amount1 = amount));
-    this.convertService.onSendShortName.subscribe((shortName => this.fromCurency = shortName));
+this.convertService.sendAmount.subscribe((value => this.amount1 = value))
+
+
+}
+
   }
 
 
 
 
 
-}
+

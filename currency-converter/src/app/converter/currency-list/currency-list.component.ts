@@ -21,8 +21,8 @@ currencies:Currency[] = [];
 
 ngOnInit(){
 
-  this.convertService.sendNewArray.subscribe((newArray =>  this.currencies = newArray));
-  //this.currencies = this.convertService.getCurrencies();
+  //this.convertService.sendNewArray.subscribe((newArray =>  this.currencies = newArray));
+  this.currencies = this.convertService.getCurrencies();
 }
 
 reload(){
@@ -30,5 +30,7 @@ reload(){
     this.router.navigate([''],{relativeTo: this.route});
 
 }
+
+
 
 }

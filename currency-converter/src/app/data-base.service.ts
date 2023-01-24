@@ -11,7 +11,7 @@ export class DataBaseService {
 
   constructor(private http:HttpClient, private convertService:ConvertService) { }
 
-  showApp = new Subject<any>();
+
 
   sendCurrencyData(){  //ako bude bilo potrebe koristice se ,za sada se ova metoda ne koristi
 

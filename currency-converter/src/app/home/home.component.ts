@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Route, Router } from '@angular/router';
+import { ConvertService } from '../converter/convert.service';
 import { DataBaseService } from '../data-base.service';
 
 @Component({
@@ -7,9 +9,15 @@ import { DataBaseService } from '../data-base.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  constructor(private dataBaseService:DataBaseService){}
+  constructor( public router:Router, public route:ActivatedRoute, public convertService:ConvertService){}
 
-  showApp(){
-    this.dataBaseService.showApp.next(true);
+  show:boolean = true;
+
+  letsStart(){
+    this.router.navigate(['/main-menu']);
+    this.show = false;
+    this.convertService.onSendShowState.next(this.show);
+
+
   }
 }

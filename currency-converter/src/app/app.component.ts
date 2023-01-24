@@ -10,12 +10,13 @@ import { DataBaseService } from './data-base.service';
 export class AppComponent {
   title = 'currency-converter';
 
-  constructor(private databaseService: DataBaseService){}
+  constructor(private convertService:ConvertService){}
 
-  appActive:any = false;
+show:boolean = true;
 
   ngOnInit(){
-    this.databaseService.showApp.subscribe((responseApp => {this.appActive = responseApp}));
+    this.convertService.onSendShowState.subscribe((value => {this.show = value}));
+
   }
 
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Route, Router } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import { DataBaseService } from '../data-base.service';
 import { ConvertService } from './convert.service';
 
@@ -10,12 +10,14 @@ import { ConvertService } from './convert.service';
 })
 export class ConverterComponent {
 
-  constructor(private dataBase:DataBaseService,private convertService:ConvertService, private route:Router){}
+  constructor(private dataBase:DataBaseService,private convertService:ConvertService, private router:Router, private route:ActivatedRoute){}
 
   ngOnInit(){
-    this.dataBase.fetchCurrencyData().subscribe((responseData =>{console.log(responseData);this.convertService.owerwrightAray(responseData);}));
+    //this.dataBase.fetchCurrencyData().subscribe((responseData =>{console.log(responseData);this.convertService.owerwrightAray(responseData);}));
 
 
 
   }
+
+  
 }

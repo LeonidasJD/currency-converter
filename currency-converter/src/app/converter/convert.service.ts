@@ -13,6 +13,11 @@ export class ConvertService {
   sendAmount = new Subject<number>();
   onSendShortName = new Subject<string>();
   sendNewArray = new Subject<Currency[]>();
+  onSendShowState = new Subject<boolean>();
+
+
+
+
 
 
   ngOnInit(){
@@ -20,9 +25,23 @@ export class ConvertService {
 
   }
 
-  currencies:Currency[] = [];
-
-
+  currencies:Currency[] = [
+    new Currency(
+      'Euro',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Europe.svg/231px-Flag_of_Europe.svg.png',
+      'EUR'
+    ),
+    new Currency(
+      'Dinar',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/239px-Flag_of_Serbia.svg.png',
+      'RSD'
+    ),
+    new Currency(
+      'Franc',
+      'https://www.svajcarska.com/wp-content/uploads/2018/04/Flag_of_Switzerland-300x300.png',
+      'CHF'
+    )
+  ];
 
   getCurrencies(){
     return this.currencies;
@@ -37,4 +56,8 @@ this.currencies = newArray;
 this.sendNewArray.next(newArray);
 
 }
+
+conversionCurrency(){
+}
+
 }

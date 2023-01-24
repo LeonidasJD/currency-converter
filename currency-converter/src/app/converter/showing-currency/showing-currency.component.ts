@@ -17,29 +17,32 @@ export class ShowingCurrencyComponent {
   amount:number;
   id:number;
   currency:Currency;
-  currencyShortName:string;
 
-  resultRSD:number;
+
+
 
 
 
 
  ngOnInit(){
 
-this.route.params.subscribe((params =>{this.id = params['id']; this.currency = this.convertService.getCurrency(this.id)}));
 
-
+this.route.params.subscribe((params =>{this.id = params['id']; this.currency = this.convertService.getCurrency(this.id); }));
 
 
 }
 
 
 
+
+
 onConvert(){
 
-
   this.convertService.sendAmount.next(this.amount);
+
+
  }
+
 
 
 }
