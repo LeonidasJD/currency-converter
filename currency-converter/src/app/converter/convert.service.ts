@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { of, Subject } from 'rxjs';
 import { Currency } from '../currency-model/currency-model';
 
 @Injectable({
@@ -10,8 +10,7 @@ export class ConvertService {
 
   constructor(private http:HttpClient) { }
 
-  sendAmount = new Subject<number>();
-  onSendShortName = new Subject<string>();
+  sendResult = new Subject<number>();
   sendNewArray = new Subject<Currency[]>();
   onSendShowState = new Subject<boolean>();
 
@@ -57,7 +56,28 @@ this.sendNewArray.next(newArray);
 
 }
 
-conversionCurrency(){
-}
+shortName:string
 
+conversionCurrency(shortName:string,amount:number){
+console.log('To je' + shortName);
+
+let resultRsd:number
+let resultEur:number
+
+
+if(shortName === 'EUR'){
+ resultRsd = amount * 117
+ this.sendResult.next(resultRsd);
+
+}else if(shortName === 'CHF'){
+resultRsd= amount * 116
+this.sendResult.next(resultRsd);
+
+}else if(shortName === 'RSD'){
+  resultRsd = amount * 1
+  this.sendResult.next(resultRsd)
+
+
+}
+}
 }

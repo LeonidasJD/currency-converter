@@ -18,11 +18,15 @@ constructor(private convertService:ConvertService,private router: Router, privat
 
 currencies:Currency[] = [];
 
+resultRsd:number;
+resultEur:number;
 
 ngOnInit(){
 
   //this.convertService.sendNewArray.subscribe((newArray =>  this.currencies = newArray));
   this.currencies = this.convertService.getCurrencies();
+
+
 }
 
 reload(){
@@ -30,6 +34,8 @@ reload(){
     this.router.navigate([''],{relativeTo: this.route});
 
 }
+
+
 
 
 

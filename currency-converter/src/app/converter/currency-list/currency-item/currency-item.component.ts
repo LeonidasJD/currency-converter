@@ -16,7 +16,7 @@ export class CurrencyItemComponent {
 
 
 
-amount1:number
+result:number
 
 fromCurency:string;
 
@@ -24,7 +24,7 @@ fromCurency:string;
 
   ngOnInit(){
 
-this.convertService.sendAmount.subscribe((value => this.amount1 = value))
+this.convertService.sendResult.subscribe((value => {this.result = value}))
 
 
 }
