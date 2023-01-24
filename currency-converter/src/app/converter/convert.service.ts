@@ -62,7 +62,7 @@ conversionCurrency(shortName:string,amount:number){
 console.log('To je' + shortName);
 
 let resultRsd:number
-let resultEur:number
+
 
 
 if(shortName === 'EUR'){
