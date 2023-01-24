@@ -3,11 +3,17 @@
     <div class="container">
       <div class="row">
         <div class="col-sm">
-          <app-description></app-description>
+          <app-description *ngIf="appActive===true"></app-description>
         </div>
         <div class="col-sm">
-          <app-converter></app-converter>
+          <app-converter *ngIf="appActive===true"></app-converter>
         </div>
+      </div>
+      <div class="row">
+        <div class="container">
+          <app-home *ngIf="appActive===false"></app-home>
+        </div>
+
       </div>
     </div>
   </div>

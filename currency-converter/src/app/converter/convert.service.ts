@@ -14,6 +14,7 @@ export class ConvertService {
   onSendShortName = new Subject<string>();
   sendNewArray = new Subject<Currency[]>();
 
+
   ngOnInit(){
 
 

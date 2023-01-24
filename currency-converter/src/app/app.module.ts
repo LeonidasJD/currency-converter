@@ -16,7 +16,8 @@ import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
 
-    {path: ':id', component: ShowingCurrencyComponent}
+    {path: ':id', component: ShowingCurrencyComponent},
+    
 
 
 ]

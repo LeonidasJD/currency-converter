@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataBaseService } from '../data-base.service';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  constructor(private dataBaseService:DataBaseService){}
 
+  showApp(){
+    this.dataBaseService.showApp.next(true);
+  }
 }
