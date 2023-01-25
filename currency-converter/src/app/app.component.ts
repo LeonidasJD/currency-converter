@@ -19,6 +19,7 @@ show:string = 'active';
 
   ngOnInit(){
     this.convertService.onSendShowState.subscribe((value => {this.show = value}));
+    this.router.navigate(['/home']);
 
 
   }
