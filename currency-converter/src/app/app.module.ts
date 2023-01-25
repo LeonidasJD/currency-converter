@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { DescriptionComponent } from './description/description.component';
 import { MenuComponent } from './menu/menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
+import { GuardService } from './guard.service';
 
 
 
@@ -23,7 +24,7 @@ import { FooterComponent } from './footer/footer.component';
 const appRoutes: Routes = [
 
 {path: '',component:HomeComponent},
-  {path: 'main-menu', component:MenuComponent,
+  {path: 'main-menu', component:MenuComponent,canActivate:[GuardService],
   children:[
     {path:':id',component:ShowingCurrencyComponent},
 ]},
