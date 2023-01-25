@@ -18,11 +18,7 @@ export class GuardService implements CanActivate{
 
     if(this.state === 'inactive'){
       return true;
-    }
-
-
-    throw new Error('Method not implemented.')
-
+    }else{ throw new Error('Method not implemented.')}
 
   }
 }
