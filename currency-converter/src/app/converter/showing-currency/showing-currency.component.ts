@@ -25,6 +25,7 @@ export class ShowingCurrencyComponent {
 
 
 
+
  ngOnInit(){
 
 
@@ -32,6 +33,7 @@ this.route.params.subscribe((params =>{this.id = params['id'];
 this.currency = this.convertService.getCurrency(this.id);
 this.shortName = this.currency.shortName
 console.log(this.shortName);   //kada kliknemo na link gde su valute ispisujemo tu valutu iz niza u ovoj komponenti
+
 }));
 }
 
@@ -40,7 +42,8 @@ onConvert(){
  // this.convertService.sendAmount.next(this.amount);
 
   this.convertService.conversionCurrency(this.shortName,this.amount); //vrsimo konverziju valuta
-  this.convertService.sendResult.subscribe(value => {this.result = value}) //prihvatamo izracunutu vrednost iz convert service
+  this.convertService.sendResult.subscribe((value => {this.result = +value.toFixed(2);})) //prihvatamo izracunutu vrednost iz convert service
+
  }
 
 
