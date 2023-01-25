@@ -12,7 +12,7 @@ export class ConvertService {
 
   sendResult = new Subject<number>();
   sendNewArray = new Subject<Currency[]>();
-  onSendShowState = new Subject<boolean>();
+  onSendShowState = new Subject<string>();
 
 
 

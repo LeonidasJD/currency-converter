@@ -8,18 +8,21 @@ import { ConvertService } from './converter/convert.service';
 })
 export class GuardService implements CanActivate{
 
-  state:boolean;
+  state:string;
 
   constructor(private convertService:ConvertService, private router:Router) { }
+
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
 
+    this.convertService.onSendShowState.subscribe((value => {this.state = value}));
 
-    if(this.state === false){
+    if(this.state === 'inactive'){
       return true;
-    }else{
-      this.router.navigate(['/home']);
     }
 
-    throw new Error('Method not implemented.');
+
+    throw new Error('Method not implemented.')
+
+
   }
 }

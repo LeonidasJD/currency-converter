@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { ConvertService } from '../converter/convert.service';
-import { DataBaseService } from '../data-base.service';
+
 
 @Component({
   selector: 'app-home',
@@ -11,16 +11,12 @@ import { DataBaseService } from '../data-base.service';
 export class HomeComponent {
   constructor( public router:Router, public route:ActivatedRoute, public convertService:ConvertService){}
 
-  show:boolean = true;
-
+  show:string = 'active';
 
   letsStart(){
-    this.show = false;
+    this.show = 'inactive';
     this.convertService.onSendShowState.next(this.show);
     this.router.navigate(['/main-menu']);
-
-
-
 
 
   }
