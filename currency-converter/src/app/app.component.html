@@ -1,6 +1,7 @@
 <div class="body" style="height: 100vh;">
   <div class="background-transparency" style="height: 100vh;">
-    <app-home *ngIf="show===true"></app-home>
+    <app-home *ngIf="show==='active'"></app-home>
+
     <router-outlet></router-outlet> <!--main-menu komponenta-->
   </div>
 </div>

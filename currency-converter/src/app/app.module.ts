@@ -22,6 +22,7 @@ import { GuardService } from './guard.service';
 
 const appRoutes: Routes = [
 
+
   {path: 'main-menu', component:MenuComponent,canActivate:[GuardService],
   children:[
     {path:':id',component:ShowingCurrencyComponent},
@@ -58,7 +59,7 @@ const appRoutes: Routes = [
 
 
   ],
-  providers: [DataBaseService],
+  providers: [DataBaseService,GuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

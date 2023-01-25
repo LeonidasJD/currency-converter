@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ConvertService } from './converter/convert.service';
 import { DataBaseService } from './data-base.service';
 
@@ -10,14 +11,19 @@ import { DataBaseService } from './data-base.service';
 export class AppComponent {
   title = 'currency-converter';
 
-  constructor(private convertService:ConvertService){}
+  constructor(private convertService:ConvertService,private router:Router){}
 
-show:boolean = true;
+show:string = 'active';
+
+
 
   ngOnInit(){
     this.convertService.onSendShowState.subscribe((value => {this.show = value}));
 
+
   }
+
+
 
 
 }
