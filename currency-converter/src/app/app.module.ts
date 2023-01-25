@@ -22,9 +22,8 @@ const appRoutes: Routes = [
 
   {path: 'main-menu', component:MenuComponent,children:[
     {path:':id',component:ShowingCurrencyComponent},
-
-
-]}
+]},
+{path: 'home', component:HomeComponent}
 
 
 ]

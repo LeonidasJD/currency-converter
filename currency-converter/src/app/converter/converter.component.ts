@@ -19,5 +19,9 @@ export class ConverterComponent {
 
   }
 
-  
+  onClose(){
+    this.router.navigate(['home']);
+  }
+
+
 }

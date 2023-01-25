@@ -1,32 +1,24 @@
 
-  <div class="container" style="display: flex;">
-    <div class="col" style="width: 50%;">
-    <div class="row" style="display: flex;">
-      <img src={{currency.flag}} alt=""  id="upper-img" style="margin-left: 30px;">
-      <p id="rateParagraph" style="margin-left: 30px;">{{currency.shortName}}</p>
-    </div>
+  <div class="container">
     <div class="row">
-      <div class="form-outline" style="width: 200px;">
-        <input class="form-control" type="number" [(ngModel)]="amount" (ngModelChange)="onConvert()" id="input-num" name="amount" id="input-num" style="color: white; width: 60%; background-color: rgba(128, 0, 128, 0); text-align: center;">
-        <label class="form-label" for="input-num">Enter amount</label>
+      <div class="col-sm">
+        <img src={{currency.flag}} alt=""  id="upper-img" >
+        <p id="rateParagraph" >{{currency.shortName}}</p>
+        <input class="form-control" type="number" [(ngModel)]="amount" (ngModelChange)="onConvert()" id="input-num" name="amount" id="input-num" style="color: white;  background-color: rgba(128, 0, 128, 0); width: 70%; ">
+        <p style="font-size: small;">Amount for convert</p>
+      </div>
+      <div class="col-sm" id="arrow">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Arrow_east.svg/2560px-Arrow_east.svg.png" alt="" style="width:100px ; height: 50px;">
+      </div>
+      <div class="col-sm" >
+        <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/1920px-Flag_of_Serbia.svg.png" alt=""  id="upper-img" >
+        <p id="rateParagraph" >RSD</p>
+        <div id="result-div" style="width: 70%; ">
+          <p style="margin-bottom: 0px; text-align: center;">{{result}}</p>
+          </div>
+          <p style="font-size: small">Converted Amount</p>
       </div>
     </div>
-  </div>
-  <div class="col">
-    <div class="row" style="display: flex;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/1920px-Flag_of_Serbia.svg.png" alt=""  id="upper-img" style="margin-left: 30px;">
-      <p id="rateParagraph" style="margin-left: 30px;">RSD</p>
-    </div>
-    <div class="row">
-      <div class="form-outline" style="width: 200px;">
-        <div id="result-div">
-          <p>{{result}}</p>
-        </div>
-
-        <label class="form-label" for="input-num">Converted Amount</label>
-      </div>
-    </div>
-  </div>
   </div>
 
 
