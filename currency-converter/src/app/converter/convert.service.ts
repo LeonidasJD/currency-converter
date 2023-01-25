@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { of, Subject } from 'rxjs';
+import { BehaviorSubject, of, Subject, subscribeOn, Subscription } from 'rxjs';
 import { Currency } from '../currency-model/currency-model';
 
 @Injectable({
@@ -12,7 +12,7 @@ export class ConvertService {
 
   sendResult = new Subject<number>();
   sendNewArray = new Subject<Currency[]>();
-  onSendShowState = new Subject<string>();
+  onSendShowState = new BehaviorSubject<any>(null);
 
 
 
@@ -56,6 +56,8 @@ this.sendNewArray.next(newArray);
 
 }
 
+
+
 shortName:string
 
 conversionCurrency(shortName:string,amount:number){
@@ -80,4 +82,9 @@ this.sendResult.next(resultRsd);
 
 }
 }
+
+
+
+
+
 }

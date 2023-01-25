@@ -13,7 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { DescriptionComponent } from './description/description.component';
 import { MenuComponent } from './menu/menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
-import { GuardService } from './guard.service';
+
 
 
 
@@ -22,8 +22,8 @@ import { GuardService } from './guard.service';
 
 const appRoutes: Routes = [
 
-
-  {path: 'main-menu', component:MenuComponent,canActivate:[GuardService],
+{path: '',component:HomeComponent},
+  {path: 'main-menu', component:MenuComponent,
   children:[
     {path:':id',component:ShowingCurrencyComponent},
 ]},
@@ -59,7 +59,7 @@ const appRoutes: Routes = [
 
 
   ],
-  providers: [DataBaseService,GuardService],
+  providers: [DataBaseService,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
