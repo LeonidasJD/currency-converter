@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
-import { Observable } from 'rxjs';
+import { map, Observable, take } from 'rxjs';
 import { ConvertService } from './converter/convert.service';
 
 @Injectable({
@@ -19,6 +19,8 @@ export class GuardService implements CanActivate{
     if(this.state === 'inactive'){
       return true;
     }else{ throw new Error('Method not implemented.')}
+
+
 
   }
 }

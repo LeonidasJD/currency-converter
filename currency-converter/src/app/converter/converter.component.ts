@@ -10,7 +10,7 @@ import { ConvertService } from './convert.service';
 })
 export class ConverterComponent {
 
-  constructor(private dataBase:DataBaseService,private convertService:ConvertService, private router:Router, private route:ActivatedRoute){}
+  constructor(private dataBase:DataBaseService, private router:Router, ){}
 
   ngOnInit(){
     //this.dataBase.fetchCurrencyData().subscribe((responseData =>{console.log(responseData);this.convertService.owerwrightAray(responseData);}));
