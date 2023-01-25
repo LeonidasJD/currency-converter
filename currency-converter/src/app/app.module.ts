@@ -24,7 +24,7 @@ import { GuardService } from './guard.service';
 const appRoutes: Routes = [
 
 {path: '',component:HomeComponent},
-  {path: 'main-menu', component:MenuComponent,canActivate:[GuardService],
+{path: 'main-menu', component:MenuComponent,canActivate:[GuardService],
   children:[
     {path:':id',component:ShowingCurrencyComponent},
 ]},
