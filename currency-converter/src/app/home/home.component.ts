@@ -13,10 +13,14 @@ export class HomeComponent {
 
   show:boolean = true;
 
+
   letsStart(){
-    this.router.navigate(['/main-menu']);
     this.show = false;
     this.convertService.onSendShowState.next(this.show);
+    this.router.navigate(['/main-menu']);
+
+
+
 
 
   }
