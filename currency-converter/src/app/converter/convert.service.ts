@@ -8,7 +8,7 @@ import { Currency } from '../currency-model/currency-model';
 })
 export class ConvertService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   sendResult = new Subject<number>();
   sendNewArray = new Subject<Currency[]>();
@@ -79,30 +79,31 @@ shortName:string
 conversionCurrency(shortName:string,amount:number){ //prihvatamo vrednosti koje smo dobili kada smo kliknuli na odredjenu valutu
 
 let resultRsd:number
+let modifiedResult:number
 
 if(shortName === 'EUR'){  // vrsimo racunanje
- resultRsd = amount * 117.37
- this.sendResult.next(resultRsd); //saljemo izracunatu vrednost
+resultRsd = amount * 117.37;
+ this.sendResult.next(+resultRsd); //saljemo izracunatu vrednost
 
 }else if(shortName === 'CHF'){
 resultRsd= amount * 116.67
-this.sendResult.next(resultRsd);
+this.sendResult.next(+resultRsd);
 
 }else if(shortName === 'USD'){
   resultRsd = amount * 107.67
-  this.sendResult.next(resultRsd)
+  this.sendResult.next(+resultRsd)
 
 }else if(shortName === 'CAD'){
   resultRsd = amount * 80.62
-  this.sendResult.next(resultRsd)
+  this.sendResult.next(+resultRsd)
 
 }else if(shortName === 'CNY'){
   resultRsd = amount * 15.86
-  this.sendResult.next(resultRsd)
+  this.sendResult.next(+resultRsd)
 
 }else if(shortName === 'RUB'){
   resultRsd = amount * 1.56
-  this.sendResult.next(resultRsd)
+  this.sendResult.next(+resultRsd)
 }
 }
 
