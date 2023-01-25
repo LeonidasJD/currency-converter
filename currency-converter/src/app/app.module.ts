@@ -6,7 +6,7 @@ import { ShowingCurrencyComponent } from './converter/showing-currency/showing-c
 import { CurrencyListComponent } from './converter/currency-list/currency-list.component';
 import { CurrencyItemComponent } from './converter/currency-list/currency-item/currency-item.component';
 import { FormsModule } from '@angular/forms';
-import {  HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { DataBaseService } from './data-base.service';
 import { HomeComponent } from './home/home.component';
@@ -60,7 +60,7 @@ const appRoutes: Routes = [
 
 
   ],
-  providers: [DataBaseService,],
+  providers: [DataBaseService,HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
