@@ -3,24 +3,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
-}
-.col-sm{
-  display: flex;
-  justify-content: center;
-}
-.container{
-  padding-top: 100px;
-
 }
 .background-transparency{
   background-color: rgba(0, 0, 0, 0.61);
   z-index: 100;
-}
-
-#home{
-  display: flex;
-  justify-content: center;
 }
 
 
