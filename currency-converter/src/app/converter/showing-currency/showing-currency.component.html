@@ -1,5 +1,5 @@
 
-  <div class="container">
+  <!--<div class="container">
     <div class="row">
       <div class="col-sm">
         <img src={{currency.flag}} alt=""  id="upper-img" >
@@ -19,6 +19,27 @@
           <p style="font-size: small">Converted Amount</p>
       </div>
     </div>
+  </div>-->
+
+  <div class="row">
+    <div class="col-md-4 d-flex flex-column align-items-center">
+      <img src={{currency.flag}} alt=""  id="upper-img" >
+      <p id="rateParagraph" >{{currency.shortName}}</p>
+      <input class="form-control" type="number" [(ngModel)]="amount" (ngModelChange)="onConvert()" id="input-num" name="amount" >
+      <p style="font-size: small;">Amount for convert</p>
+    </div>
+    <div class="col-md-4 d-flex align-items-center justify-content-center">
+      <img src="assets/img/arrow.png" alt="" style="width:100px ; height: 50px;">
+    </div>
+    <div class="col-md-4 d-flex flex-column align-items-center">
+      <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/1920px-Flag_of_Serbia.svg.png" alt=""  id="upper-img" >
+      <p id="rateParagraph">RSD</p>
+      <div id="result-div">
+        <p id="rsd-paragraph">{{result}}</p>
+       </div>
+      <p style="font-size: small">Converted Amount</p>
+    </div>
+
   </div>
 
 

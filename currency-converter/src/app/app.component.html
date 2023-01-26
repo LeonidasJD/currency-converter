@@ -1,13 +1,21 @@
-<div class="body" style="height: 100vh;">
-  <div class="background-transparency" style="height: 100vh;">
-    <app-home *ngIf="show==='active'"></app-home>
-
-    <router-outlet></router-outlet> <!--main-menu komponenta-->
+<div class="body">
+  <div class="container-fluid"  id="background-transparency">
+    <div class="row">
+      <div class="col-md-12">
+        <app-home *ngIf="show==='active'"></app-home>
+        <div class="col-md-12">
+          <router-outlet></router-outlet> <!--main-menu komponenta-->
+        </div>
+      </div>
+    </div>
+    </div>
+    <app-footer></app-footer>
   </div>
-</div>
-<div>
-  <app-footer></app-footer>
-</div>
+
+
+
+
+
 
 
 

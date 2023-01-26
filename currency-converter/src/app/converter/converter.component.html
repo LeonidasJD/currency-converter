@@ -1,17 +1,22 @@
 <div class="row" id="main-row">
-  <div class="col-md">
-    <router-outlet></router-outlet> <!--showing currency component-->
-  </div>
-  <div class="row" >
-    <div class="col-md">
-      <app-currency-list></app-currency-list>
-      <div id="btnClose">
-        <button class="btn btn-danger" (click)="onClose()">Close App</button>
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-12">
+        <router-outlet></router-outlet> <!--showing currency component-->
       </div>
-
     </div>
+      <div class="row" >
+        <div class="col-md-12">
+          <app-currency-list></app-currency-list>
+        </div>
+      </div>
+          <div class="row" id="btnClose">
+              <button class="btn btn-danger" id="btn-close" (click)="onClose()">Close App</button>
+          </div>
   </div>
-
-
 </div>
+
+
+
+
 
