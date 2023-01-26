@@ -12,8 +12,8 @@ import { DataBaseService } from './data-base.service';
 import { HomeComponent } from './home/home.component';
 import { DescriptionComponent } from './description/description.component';
 import { MenuComponent } from './menu/menu/menu.component';
-import { FooterComponent } from './footer/footer.component';
 import { GuardService } from './guard.service';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -43,7 +43,8 @@ const appRoutes: Routes = [
     CurrencyItemComponent,
     HomeComponent,
     MenuComponent,
-    FooterComponent,
+    FooterComponent
+
 
 
 

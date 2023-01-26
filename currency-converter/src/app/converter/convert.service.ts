@@ -56,6 +56,7 @@ export class ConvertService {
       'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Russia.svg/255px-Flag_of_Russia.svg.png',
       'RUB'
     ),
+
   ];
 
   getCurrencies(){
