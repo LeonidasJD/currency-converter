@@ -1,26 +1,10 @@
 #main-row{
   background-color: rgba(80, 79, 79, 0.075);
   border-radius: 5px;
-  width: 500px;
-  display: flex;
-  justify-content: center;
-  padding-bottom: 40px;
 }
-.col-sm{
-display: flex;
-justify-content: center;
+#btn-close{
+  margin-top: 15px;
 }
 
-.col-for-cur-list{
-  display: flex;
-  justify-content: center;
-}
-
-#btnClose{
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-
-}
 
 

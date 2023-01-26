@@ -1,31 +1,22 @@
-.currency-detail{
-
-  display: flex;
-
-}
 
 #flag{
   max-width: 50px;
   max-height:30px;
-  margin-right: 5px;
   text-align: le;
   border-radius: 5px;
 }
 
-
-.cur-name,.cur-short-name{
+#short-name,#currency-name{
+  margin-left: 10px;
   margin-bottom: 0px;
 }
-
-
-.amount{
-  text-align: right;
-  margin-right: 5px;
+@media screen and (max-width:1200px){
+  #short-name,#currency-name{
+    margin-left: 20px;
+    margin-bottom: 0px;
+  }
 }
-#col1{
-  width: 60px;
-  height: 30px;
-}
+
 a:hover{
   font-weight: bold;
 }
