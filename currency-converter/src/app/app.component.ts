@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { ConvertService } from './converter/convert.service';
 import { DataBaseService } from './data-base.service';
@@ -13,13 +13,16 @@ export class AppComponent {
 
   constructor(private convertService:ConvertService,private router:Router){}
 
-show:string = 'active';
+
+  show:string = 'active';
 
 
 
   ngOnInit(){
     this.convertService.onSendShowState.subscribe((value => {this.show = value}));
     this.router.navigate(['/home']);
+
+
 
 
   }
