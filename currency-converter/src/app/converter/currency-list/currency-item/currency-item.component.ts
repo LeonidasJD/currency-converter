@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { Currency } from 'src/app/currency-model/currency-model';
 import { ConvertService } from '../../convert.service';
 
@@ -16,9 +16,12 @@ export class CurrencyItemComponent {
 
 
 
-result:number
 
+
+result:number
 fromCurency:string;
+
+
 
 
 
@@ -29,7 +32,13 @@ this.convertService.sendResult.subscribe((value => {this.result = value}))
 
 }
 
-  }
+
+
+}
+
+
+
+
 
 
 
