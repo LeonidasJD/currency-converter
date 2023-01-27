@@ -1,13 +1,35 @@
-.body{
+#main-div{
   background-image: url("D:\ANGULAR\currency-converter\world-map.jpg");
   background-size: cover;
   background-position: center;
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
+  height: 100vh;
 
 }
 #background-transparency{
   background-color: rgba(0, 0, 0, 0.61);
   height: 100vh;
+
 }
+
+@media (max-height:915px){
+
+  #main-div{
+    height: 915px;
+
+  }
+  #background-transparency{
+    height: 915px;
+  }
+
+
+}
+
+
+
+
 
 
 
