@@ -14,6 +14,7 @@ import { DescriptionComponent } from './description/description.component';
 import { MenuComponent } from './menu/menu/menu.component';
 import { GuardService } from './guard.service';
 import { FooterComponent } from './footer/footer.component';
+import { IncreaseHeightDirective } from './increase-height.directive';
 
 
 
@@ -43,7 +44,8 @@ const appRoutes: Routes = [
     CurrencyItemComponent,
     HomeComponent,
     MenuComponent,
-    FooterComponent
+    FooterComponent,
+    IncreaseHeightDirective
 
 
 
