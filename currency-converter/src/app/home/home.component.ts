@@ -1,5 +1,8 @@
+
 import { Component } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core/public_api';
+
 import { ConvertService } from '../converter/convert.service';
 
 
@@ -14,13 +17,18 @@ export class HomeComponent {
 
   show:string = 'active';
 
+ngOnInit(){
 
+
+
+}
 
   letsStart(){
     this.show = 'inactive';
     this.convertService.onSendShowState.next(this.show);
     this.router.navigate(['/main-menu']);
-
-
   }
+
+
+
 }
