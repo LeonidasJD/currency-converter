@@ -1,9 +1,9 @@
 
 import { Component } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
-import { TranslateService } from '@ngx-translate/core/public_api';
-
 import { ConvertService } from '../converter/convert.service';
+import { TranslateService } from '@ngx-translate/core';
+import { transition } from '@angular/animations';
 
 
 
@@ -13,7 +13,18 @@ import { ConvertService } from '../converter/convert.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  constructor( public router:Router, public route:ActivatedRoute, public convertService:ConvertService){}
+  constructor( public router:Router, public route:ActivatedRoute, public convertService:ConvertService,public translate:TranslateService){
+
+    translate.addLangs(['en','sr']);
+    translate.setDefaultLang('en');
+
+
+    const browserLang = translate.getBrowserLang();
+    translate.use(browserLang?.match(/en|sr/)? browserLang : 'en');
+
+
+  }
+
 
   show:string = 'active';
 
@@ -22,12 +33,18 @@ ngOnInit(){
 
 
 }
+changeLanguage(language:string){
+  this.translate.use(language)
+
+}
 
   letsStart(){
     this.show = 'inactive';
     this.convertService.onSendShowState.next(this.show);
     this.router.navigate(['/main-menu']);
   }
+
+
 
 
 
