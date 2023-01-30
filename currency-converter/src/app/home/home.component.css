@@ -17,6 +17,27 @@
   margin-top: 20px;
 }
 
+.langBtn{
+  background-color: rgba(255, 255, 255, 0);
+  border-color: white;
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+.startBtn{
+  background-color:white(128, 0, 128);
+  border-color: white;
+  color: purple;
+  border-radius: 5px;
+  border-width: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
 
 
 
