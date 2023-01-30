@@ -1,0 +1,27 @@
+{
+  "HOME":{
+    "TITLE": "Dobrodošli u aplikaciju za konvertovanje valuta",
+    "BTN-TEXT": "POČNIMO!",
+    "SELECT-TEXT": "Izaberi jezik"
+  },
+  "DESCRIPTION":{
+    "TITLE":"Konverter Valuta",
+    "PARAGRAPH": "Kursna lista br.19 oficijalni srednji kurs RSD formiran na dan 30.01.2023.",
+    "SPAN": "Izaberite valutu koju želite da konvertujete!"
+  },
+  "CONVERTER":{
+    "BTN-TEXT": "Zatvori aplikaciju"
+  },
+  "ITEM":{
+    "0": "Evro",
+    "1": "Franak",
+    "2": "Dolar",
+    "3":"Dolar",
+    "4": "Jen",
+    "5": "Rublja"
+  },
+  "SHOWING":{
+    "CONVERT":"Iz Valute",
+    "CONVERTED": "U Valutu"
+  }
+}

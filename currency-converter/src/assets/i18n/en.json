@@ -1,0 +1,28 @@
+{
+  "HOME":{
+    "TITLE": "Welcome to converter APP",
+    "BTN-TEXT": "LET'S GET STARTED!",
+    "SELECT-TEXT": "Select language"
+  },
+  "DESCRIPTION":{
+    "TITLE":"Currency Converter",
+    "PARAGRAPH": "Exchange list no.19 official middle RSD exchange rate formed on 30.01.2023.",
+    "SPAN": "Choose the currency you want to convert!"
+  },
+  "CONVERTER":{
+    "BTN-TEXT": "Close App"
+  },
+  "ITEM":{
+    "0": "Euro",
+    "1": "Franc",
+    "2": "Dollar",
+    "3":"Dollar",
+    "4": "Yen",
+    "5": "Ruble"
+  },
+  "SHOWING":{
+    "CONVERT":"Amount for convert",
+    "CONVERTED": "Converted Amount"
+  }
+}
+
