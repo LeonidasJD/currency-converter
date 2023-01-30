@@ -15,6 +15,13 @@ import { MenuComponent } from './menu/menu/menu.component';
 import { GuardService } from './guard.service';
 import { FooterComponent } from './footer/footer.component';
 import { IncreaseHeightDirective } from './increase-height.directive';
+import { TranslateModule,TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+
+export function HttpLoaderFactory(http: HttpClient){
+  return new TranslateHttpLoader(http);
+}
 
 
 
@@ -45,7 +52,8 @@ const appRoutes: Routes = [
     HomeComponent,
     MenuComponent,
     FooterComponent,
-    IncreaseHeightDirective
+    IncreaseHeightDirective,
+
 
 
 
@@ -60,6 +68,13 @@ const appRoutes: Routes = [
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
+    TranslateModule.forRoot({
+      loader:{
+        provide:TranslateLoader,
+        useFactory:HttpLoaderFactory ,
+        deps:[HttpClient]
+      }
+    })
 
 
 
