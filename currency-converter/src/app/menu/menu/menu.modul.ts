@@ -10,6 +10,7 @@ import { CurrencyListComponent } from "src/app/converter/currency-list/currency-
 import { ShowingCurrencyComponent } from "src/app/converter/showing-currency/showing-currency.component";
 import { DescriptionComponent } from "src/app/description/description.component";
 import { IncreaseHeightDirective } from "src/app/increase-height.directive";
+import { LazyComponent } from "src/app/menu/menu/lazy/lazy.component";
 import { MenuComponent } from "./menu.component";
 
 @NgModule({
@@ -21,6 +22,7 @@ import { MenuComponent } from "./menu.component";
     CurrencyListComponent,
     CurrencyItemComponent,
     IncreaseHeightDirective,
+    LazyComponent
 
 
   ],
@@ -41,6 +43,7 @@ import { MenuComponent } from "./menu.component";
     CurrencyListComponent,
     CurrencyItemComponent,
     IncreaseHeightDirective,
+    LazyComponent
 
 
   ]

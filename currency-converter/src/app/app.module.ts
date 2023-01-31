@@ -19,8 +19,7 @@ import { TranslateModule,TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { MenuModule } from './menu/menu/menu.modul';
 import { HomeModule } from './home/home.module';
-
-
+import { LazyComponent } from './menu/menu/lazy/lazy.component';
 
 
 
@@ -37,12 +36,14 @@ export function HttpLoaderFactory(http: HttpClient){
 
 const appRoutes: Routes = [
 
-{path: '',component:HomeComponent},
+{path: '', redirectTo:'/main-menu', pathMatch:'full'},
 {path: 'main-menu', component:MenuComponent,canActivate:[GuardService],
   children:[
     {path:':id',component:ShowingCurrencyComponent},
 ]},
 {path: 'home', component:HomeComponent}
+
+
 
 
 ]
@@ -58,6 +59,7 @@ const appRoutes: Routes = [
     //HomeComponent,
    // MenuComponent,
     FooterComponent,
+    //LazyComponent,
     //IncreaseHeightDirective,
 
 
