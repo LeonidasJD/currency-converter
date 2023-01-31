@@ -17,6 +17,12 @@ import { FooterComponent } from './footer/footer.component';
 import { IncreaseHeightDirective } from './increase-height.directive';
 import { TranslateModule,TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { MenuModule } from './menu/menu/menu.modul';
+import { HomeModule } from './home/home.module';
+
+
+
+
 
 
 export function HttpLoaderFactory(http: HttpClient){
@@ -44,15 +50,15 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    DescriptionComponent,
-    ConverterComponent,
-    ShowingCurrencyComponent,
-    CurrencyListComponent,
-    CurrencyItemComponent,
-    HomeComponent,
-    MenuComponent,
+    //DescriptionComponent,
+    //ConverterComponent,
+    //ShowingCurrencyComponent,
+    //CurrencyListComponent,
+    //CurrencyItemComponent,
+    //HomeComponent,
+   // MenuComponent,
     FooterComponent,
-    IncreaseHeightDirective,
+    //IncreaseHeightDirective,
 
 
 
@@ -67,6 +73,8 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    MenuModule,
+    HomeModule,
     RouterModule.forRoot(appRoutes),
     TranslateModule.forRoot({
       loader:{
