@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subject } from 'rxjs';
-import { Currency } from 'src/app/currency-model/currency-model';
-import { DataBaseService } from 'src/app/data-base.service';
-import { ConvertService } from '../convert.service';
+import { Currency } from 'src/app/shared/models/currency-model';
+import { DataBaseService } from 'src/app//shared/services/data-base.service';
+import { ConvertService } from '../../shared/services/convert.service';
 
 @Component({
   selector: 'app-currency-list',
@@ -12,31 +12,18 @@ import { ConvertService } from '../convert.service';
 })
 export class CurrencyListComponent {
 
-constructor(private convertService:ConvertService,private router: Router, private route:ActivatedRoute ){}
+  currencies: Currency[] = [];
+  resultRsd: number;
+  resultEur: number;
 
+  constructor(private convertService: ConvertService, private router: Router, private route: ActivatedRoute) { }
 
+  ngOnInit() {
+    //this.convertService.sendNewArray.subscribe((newArray =>  this.currencies = newArray));
+    this.currencies = this.convertService.getCurrencies();
+  }
 
-currencies:Currency[] = [];
-
-resultRsd:number;
-resultEur:number;
-
-ngOnInit(){
-
-  //this.convertService.sendNewArray.subscribe((newArray =>  this.currencies = newArray));
-  this.currencies = this.convertService.getCurrencies();
-
-
-}
-
-reload(){
-
-    this.router.navigate([''],{relativeTo: this.route});
-
-}
-
-
-
-
-
+  reload() {
+    this.router.navigate([''], { relativeTo: this.route });
+  }
 }

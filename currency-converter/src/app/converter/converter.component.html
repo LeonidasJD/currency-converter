@@ -5,18 +5,13 @@
         <router-outlet></router-outlet> <!--showing currency component-->
       </div>
     </div>
-      <div class="row" >
-        <div class="col-md-12">
-          <app-currency-list></app-currency-list>
-        </div>
+    <div class="row">
+      <div class="col-md-12">
+        <app-currency-list></app-currency-list>
       </div>
-          <div class="row" id="btnClose">
-              <button class="btn btn-danger" id="btn-close" (click)="onClose()">{{'CONVERTER.BTN-TEXT' | translate}}</button>
-          </div>
+    </div>
+    <div class="row" id="btnClose">
+      <button class="btn btn-danger" id="btn-close" (click)="onClose()">{{'CONVERTER.BTN-TEXT' | translate}}</button>
+    </div>
   </div>
 </div>
-
-
-
-
-

@@ -2,20 +2,19 @@
 
   <div class="row">
     <div class="col-12 col-sm-12 d-flex flex-column align-items-center">
-      <h1 >{{'HOME.TITLE' | translate}}</h1>
-      <img id="home-img" src="assets/img/exchange-big.png" alt="" >
-      <button class="startBtn" (click)="letsStart()" >{{'HOME.BTN-TEXT' | translate}}</button>
+      <h1>{{'HOME.TITLE' | translate}}</h1>
+      <img id="home-img" src="assets/img/exchange-big.png" alt="">
+      <button class="startBtn" (click)="letsStart()">{{'HOME.BTN-TEXT' | translate}}</button>
     </div>
   </div>
   <div style="margin-top:30px" class="row">
     <div class="col-md-12 d-flex flex-column align-items-center">
       <h4 for="selectLang">{{'HOME.SELECT-TEXT' | translate}}</h4>
       <div style="margin-top: 10px; ">
-        <button style="margin-right: 10px;" class="langBtn" (click)="changeLanguage('en')"><img src="assets/img/en.png" alt=""> EN</button>
-        <button  class="langBtn" (click)="changeLanguage('sr')"><img src="assets/img/sr.png" alt=""> SR</button>
+        <button style="margin-right: 10px;" class="langBtn" (click)="changeLanguage('en')"><img src="assets/img/en.png"
+            alt=""> EN</button>
+        <button class="langBtn" (click)="changeLanguage('sr')"><img src="assets/img/sr.png" alt=""> SR</button>
       </div>
     </div>
   </div>
 </div>
-
-

@@ -1,26 +1,24 @@
-
-
-  <div class="row">
-    <div class="col-md-4 d-flex flex-column align-items-center">
-      <img src={{currency.flag}} alt=""  id="upper-img" >
-      <p id="rateParagraph" >{{currency.shortName}}</p>
-      <input class="form-control" type="number" [(ngModel)]="amount" (ngModelChange)="onConvert()" id="input-num" name="amount" >
-      <p style="font-size: small;">{{'SHOWING.CONVERT' | translate}}</p>
+<div class="row">
+  <div class="col-md-4 d-flex flex-column align-items-center">
+    <img src={{currency.flag}} alt="" id="upper-img">
+    <p id="rateParagraph">{{currency.shortName}}</p>
+    <input class="form-control" type="number" [(ngModel)]="amount" (ngModelChange)="onConvert()" id="input-num"
+      name="amount">
+    <p style="font-size: small;">{{'SHOWING.CONVERT' | translate}}</p>
+  </div>
+  <div class="col-md-4 d-flex align-items-center flex-column justify-content-center">
+    <img src="assets/img/arrow.png" alt="" style="width:100px ; height: 50px;">
+    <p>1 {{currency.shortName}} = {{currency.rate}} RSD</p>
+  </div>
+  <div class="col-md-4 d-flex flex-column align-items-center">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/1920px-Flag_of_Serbia.svg.png"
+      alt="" id="upper-img">
+    <p id="rateParagraph">RSD</p>
+    <div id="result-div">
+      <p id="rsd-paragraph">{{result}}</p>
     </div>
-    <div class="col-md-4 d-flex align-items-center flex-column justify-content-center">
-      <img src="assets/img/arrow.png" alt="" style="width:100px ; height: 50px;">
-      <p>1 {{currency.shortName}} = {{currency.rate}} RSD</p>
-    </div>
-    <div class="col-md-4 d-flex flex-column align-items-center">
-      <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/1920px-Flag_of_Serbia.svg.png" alt=""  id="upper-img" >
-      <p id="rateParagraph">RSD</p>
-      <div id="result-div">
-        <p id="rsd-paragraph">{{result}}</p>
-       </div>
-      <p style="font-size: small">{{'SHOWING.CONVERTED' | translate}}</p>
-    </div>
-
+    <p style="font-size: small">{{'SHOWING.CONVERTED' | translate}}</p>
   </div>
 
-
-
+</div>

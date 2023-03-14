@@ -1,32 +1,23 @@
-import { HttpClient } from '@angular/common/http';
+
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, of, Subject, subscribeOn, Subscription } from 'rxjs';
-import { Currency } from '../currency-model/currency-model';
+import { BehaviorSubject, of, Subject } from 'rxjs';
+import { Currency } from '../models/currency-model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ConvertService {
 
-  constructor(private http:HttpClient) { }
-
   sendResult = new Subject<number>();
   sendNewArray = new Subject<Currency[]>();
   onSendShowState = new BehaviorSubject<any>(null);
+  shortName: string
 
+  constructor() { }
 
+  ngOnInit() { }
 
-
-
-
-
-
-  ngOnInit(){
-
-
-  }
-
-  currencies:Currency[] = [
+  currencies: Currency[] = [
     new Currency(
       'Euro',
       'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Europe.svg/231px-Flag_of_Europe.svg.png',
@@ -72,57 +63,47 @@ export class ConvertService {
 
   ];
 
-  getCurrencies(){
+  getCurrencies() {
     return this.currencies;
   }
 
- getCurrency(id:number){
-  return this.currencies[id];
- }
+  getCurrency(id: number) {
+    return this.currencies[id];
+  }
 
-owerwrightAray(newArray:Currency[]){
-this.currencies = newArray;
-this.sendNewArray.next(newArray);
+  owerwrightAray(newArray: Currency[]) {
+    this.currencies = newArray;
+    this.sendNewArray.next(newArray);
 
-}
+  }
 
+  conversionCurrency(shortName: string, amount: number) { //prihvatamo vrednosti koje smo dobili kada smo kliknuli na odredjenu valutu
 
+    let resultRsd: number
 
-shortName:string
+    if (shortName === 'EUR') {  // vrsimo racunanje
+      resultRsd = amount * 117.37;
+      this.sendResult.next(+resultRsd); //saljemo izracunatu vrednost
 
-conversionCurrency(shortName:string,amount:number){ //prihvatamo vrednosti koje smo dobili kada smo kliknuli na odredjenu valutu
+    } else if (shortName === 'CHF') {
+      resultRsd = amount * 117.23
+      this.sendResult.next(+resultRsd);
 
-let resultRsd:number
+    } else if (shortName === 'USD') {
+      resultRsd = amount * 108.01
+      this.sendResult.next(+resultRsd)
 
+    } else if (shortName === 'CAD') {
+      resultRsd = amount * 81.01
+      this.sendResult.next(+resultRsd)
 
-if(shortName === 'EUR'){  // vrsimo racunanje
-resultRsd = amount * 117.37;
- this.sendResult.next(+resultRsd); //saljemo izracunatu vrednost
+    } else if (shortName === 'CNY') {
+      resultRsd = amount * 15.99
+      this.sendResult.next(+resultRsd)
 
-}else if(shortName === 'CHF'){
-resultRsd= amount * 117.23
-this.sendResult.next(+resultRsd);
-
-}else if(shortName === 'USD'){
-  resultRsd = amount * 108.01
-  this.sendResult.next(+resultRsd)
-
-}else if(shortName === 'CAD'){
-  resultRsd = amount * 81.01
-  this.sendResult.next(+resultRsd)
-
-}else if(shortName === 'CNY'){
-  resultRsd = amount * 15.99
-  this.sendResult.next(+resultRsd)
-
-}else if(shortName === 'RUB'){
-  resultRsd = amount * 1.53
-  this.sendResult.next(+resultRsd)
-}
-}
-
-
-
-
-
+    } else if (shortName === 'RUB') {
+      resultRsd = amount * 1.53
+      this.sendResult.next(+resultRsd)
+    }
+  }
 }

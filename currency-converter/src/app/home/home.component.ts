@@ -1,7 +1,7 @@
 
 import { Component } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
-import { ConvertService } from '../converter/convert.service';
+import { ConvertService } from '../shared/services/convert.service';
 import { TranslateService } from '@ngx-translate/core';
 import { transition } from '@angular/animations';
 
@@ -13,39 +13,28 @@ import { transition } from '@angular/animations';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  constructor( public router:Router, public route:ActivatedRoute, public convertService:ConvertService,public translate:TranslateService){
 
-    translate.addLangs(['en','sr']);
+  show: string = 'active';
+
+  constructor(public router: Router, public route: ActivatedRoute, public convertService: ConvertService, public translate: TranslateService) {
+
+    translate.addLangs(['en', 'sr']);
     translate.setDefaultLang('en');
 
-
     const browserLang = translate.getBrowserLang();
-    translate.use(browserLang?.match(/en|sr/)? browserLang : 'en');
+    translate.use(browserLang?.match(/en|sr/) ? browserLang : 'en');
+  }
+  
 
+  ngOnInit() { }
 
+  changeLanguage(language: string) {
+    this.translate.use(language)
   }
 
-
-  show:string = 'active';
-
-ngOnInit(){
-
-
-
-}
-changeLanguage(language:string){
-  this.translate.use(language)
-
-}
-
-  letsStart(){
+  letsStart() {
     this.show = 'inactive';
     this.convertService.onSendShowState.next(this.show);
     this.router.navigate(['/main-menu']);
   }
-
-
-
-
-
 }

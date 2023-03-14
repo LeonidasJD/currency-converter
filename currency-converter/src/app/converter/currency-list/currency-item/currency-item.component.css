@@ -1,23 +1,25 @@
-
-#flag{
+#flag {
   max-width: 50px;
-  max-height:30px;
+  max-height: 30px;
   text-align: le;
   border-radius: 5px;
 }
 
-#short-name,#currency-name{
+#short-name,
+#currency-name {
   margin-left: 10px;
   margin-bottom: 0px;
 }
-@media screen and (max-width:1200px){
-  #short-name,#currency-name{
+
+@media screen and (max-width:1200px) {
+
+  #short-name,
+  #currency-name {
     margin-left: 20px;
     margin-bottom: 0px;
   }
 }
 
-a:hover{
+a:hover {
   font-weight: bold;
 }
-

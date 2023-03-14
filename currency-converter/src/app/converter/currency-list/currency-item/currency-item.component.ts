@@ -1,6 +1,6 @@
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
-import { Currency } from 'src/app/currency-model/currency-model';
-import { ConvertService } from '../../convert.service';
+import { Currency } from 'src/app/shared/models/currency-model';
+import { ConvertService } from '../../../shared/services/convert.service';
 
 @Component({
   selector: 'app-currency-item',
@@ -8,32 +8,18 @@ import { ConvertService } from '../../convert.service';
   styleUrls: ['./currency-item.component.css']
 })
 export class CurrencyItemComponent {
-  constructor(private convertService:ConvertService){}
 
+  @Input() currency: Currency;
+  @Input() id: number;
+  result: number
+  fromCurency: string;
 
-@Input() currency:Currency;
-@Input() id:number;
+  constructor(private convertService: ConvertService) { }
 
+  ngOnInit() {
 
-
-
-
-result:number
-fromCurency:string;
-
-
-
-
-
-  ngOnInit(){
-
-this.convertService.sendResult.subscribe((value => {this.result = value}))
-
-
-}
-
-
-
+    this.convertService.sendResult.subscribe((value => { this.result = value }))
+  }
 }
 
 

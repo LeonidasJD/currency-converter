@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
-import { DataBaseService } from '../data-base.service';
-import { ConvertService } from './convert.service';
+import { DataBaseService } from '../shared/services/data-base.service';
+import { ConvertService } from '../shared/services/convert.service';
 
 @Component({
   selector: 'app-converter',
@@ -10,18 +10,11 @@ import { ConvertService } from './convert.service';
 })
 export class ConverterComponent {
 
-  constructor(private dataBase:DataBaseService, private router:Router, ){}
+  constructor(private dataBase: DataBaseService, private router: Router,) { }
 
-  ngOnInit(){
-    //this.dataBase.fetchCurrencyData().subscribe((responseData =>{console.log(responseData);this.convertService.owerwrightAray(responseData);}));
+  ngOnInit() {}
 
-
-
-  }
-
-  onClose(){
+  onClose() {
     this.router.navigate(['home']);
   }
-
-
 }

@@ -9,12 +9,12 @@ import { CurrencyItemComponent } from "src/app/converter/currency-list/currency-
 import { CurrencyListComponent } from "src/app/converter/currency-list/currency-list.component";
 import { ShowingCurrencyComponent } from "src/app/converter/showing-currency/showing-currency.component";
 import { DescriptionComponent } from "src/app/description/description.component";
-import { IncreaseHeightDirective } from "src/app/increase-height.directive";
+import { IncreaseHeightDirective } from "src/app/shared/directives/increase-height.directive";
 import { LazyComponent } from "src/app/menu/menu/lazy/lazy.component";
 import { MenuComponent } from "./menu.component";
 
 @NgModule({
-  declarations:[
+  declarations: [
     MenuComponent,
     DescriptionComponent,
     ConverterComponent,
@@ -27,7 +27,7 @@ import { MenuComponent } from "./menu.component";
 
   ],
 
-  imports:[
+  imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
@@ -35,7 +35,7 @@ import { MenuComponent } from "./menu.component";
     TranslateModule
   ],
 
-  exports:[
+  exports: [
     MenuComponent,
     DescriptionComponent,
     ConverterComponent,
@@ -49,7 +49,7 @@ import { MenuComponent } from "./menu.component";
   ]
 })
 
-export class MenuModule{
+export class MenuModule {
 
 
 }

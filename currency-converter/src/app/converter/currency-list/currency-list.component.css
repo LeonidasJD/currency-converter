@@ -1,7 +1,8 @@
-*{
+* {
   color: white;
 }
-.cur-item{
+
+.cur-item {
   background-color: rgba(78, 78, 78, 0.384);
   border-radius: 5px;
   padding-left: 10px;

@@ -1,28 +1,14 @@
-.desc-txt,.span-txt,.h3-txt {
+.desc-txt,
+.span-txt,
+.h3-txt {
   color: white;
   text-align: center;
 }
 
 @media (max-width:500px) {
-  img{
+  img {
     width: 106px;
     height: 106px;
   }
 
 }
-
-
-
- /* @media (max-width:500px){
-    .h2-txt{
-      font-size:22px;
-
-    }
-    .desc-txt{
-      font-size: 13px
-    }
-    .h3-txt{
-      font-size: 20px
-    }*/
-
-

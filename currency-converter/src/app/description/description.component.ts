@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ConvertService } from '../converter/convert.service';
-import { DataBaseService } from '../data-base.service';
+import { ConvertService } from '../shared/services/convert.service';
+import { DataBaseService } from '../shared/services/data-base.service';
 
 @Component({
   selector: 'app-description',
@@ -9,11 +9,7 @@ import { DataBaseService } from '../data-base.service';
 })
 export class DescriptionComponent {
 
-  constructor(public dataBase:DataBaseService, private convertService:ConvertService){}
-
-
-
-
+  constructor(public dataBase: DataBaseService, private convertService: ConvertService) { }
 }
 
 
